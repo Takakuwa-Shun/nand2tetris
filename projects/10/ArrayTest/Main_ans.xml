@@ -1,0 +1,286 @@
+<class>
+<keyword> class </keyword>
+<identifier> Main, defined, kind = class </identifier>
+<symbol> { </symbol>
+<subroutineDec>
+<keyword> function </keyword>
+<keyword> void </keyword>
+<identifier> main, defined, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+<keyword> var </keyword>
+<identifier> Array, used, kind = class </identifier>
+<identifier> a, defined, kind = VAR, type = Array, idx = 0 </identifier>
+<symbol> ; </symbol>
+</varDec>
+<varDec>
+<keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> length, defined, kind = VAR, type = int, idx = 1 </identifier>
+<symbol> ; </symbol>
+</varDec>
+<varDec>
+<keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> i, defined, kind = VAR, type = int, idx = 2 </identifier>
+<symbol> , </symbol>
+<identifier> sum, defined, kind = VAR, type = int, idx = 3 </identifier>
+<symbol> ; </symbol>
+</varDec>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> length, used, kind = VAR, type = int, idx = 1 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Keyboard, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> readInt, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> HOW MANY NUMBERS?  </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> a, used, kind = VAR, type = Array, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Array, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> new, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> length, used, kind = VAR, type = int, idx = 1 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<whileStatement>
+<keyword> while </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> length, used, kind = VAR, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> a, used, kind = VAR, type = Array, idx = 0 </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Keyboard, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> readInt, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> ENTER THE NEXT NUMBER:  </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+</statements>
+<symbol> } </symbol>
+</whileStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> sum, used, kind = VAR, type = int, idx = 3 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<whileStatement>
+<keyword> while </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> length, used, kind = VAR, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> sum, used, kind = VAR, type = int, idx = 3 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> sum, used, kind = VAR, type = int, idx = 3 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> a, used, kind = VAR, type = Array, idx = 0 </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> i, used, kind = VAR, type = int, idx = 2 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+</statements>
+<symbol> } </symbol>
+</whileStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Output, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> printString, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> THE AVERAGE IS:  </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Output, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> printInt, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> sum, used, kind = VAR, type = int, idx = 3 </identifier>
+</term>
+<symbol> / </symbol>
+<term>
+<identifier> length, used, kind = VAR, type = int, idx = 1 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Output, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> println, used, kind = subroutine </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol> } </symbol>
+</class>

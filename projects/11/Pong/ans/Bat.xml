@@ -1,0 +1,863 @@
+<class>
+<keyword> class </keyword>
+<identifier> Bat, defined, kind = class </identifier>
+<symbol> { </symbol>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int </keyword>
+<identifier> x, defined, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> , </symbol>
+<identifier> y, defined, kind = FIELD, type = int, idx = 1 </identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int </keyword>
+<identifier> width, defined, kind = FIELD, type = int, idx = 2 </identifier>
+<symbol> , </symbol>
+<identifier> height, defined, kind = FIELD, type = int, idx = 3 </identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int </keyword>
+<identifier> direction, defined, kind = FIELD, type = int, idx = 4 </identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<subroutineDec>
+<keyword> constructor </keyword>
+<identifier> Bat, used, kind = class </identifier>
+<identifier> new, defined, kind = subroutine, type = Bat </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int </keyword>
+<identifier> Ax, defined, kind = ARG, type = int, idx = 0 </identifier>
+<symbol> , </symbol>
+<keyword> int </keyword>
+<identifier> Ay, defined, kind = ARG, type = int, idx = 1 </identifier>
+<symbol> , </symbol>
+<keyword> int </keyword>
+<identifier> Awidth, defined, kind = ARG, type = int, idx = 2 </identifier>
+<symbol> , </symbol>
+<keyword> int </keyword>
+<identifier> Aheight, defined, kind = ARG, type = int, idx = 3 </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Ax, used, kind = ARG, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Ay, used, kind = ARG, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Awidth, used, kind = ARG, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Aheight, used, kind = ARG, type = int, idx = 3 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> direction, used, kind = FIELD, type = int, idx = 4 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> show, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> dispose, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Memory, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> deAlloc, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> show, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> draw, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> hide, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> draw, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> draw, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> drawRectangle, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> setDirection, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int </keyword>
+<identifier> Adirection, defined, kind = ARG, type = int, idx = 0 </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> direction, used, kind = FIELD, type = int, idx = 4 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Adirection, used, kind = ARG, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> int </keyword>
+<identifier> getLeft, defined, kind = subroutine, type = int </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+<keyword> return </keyword>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> int </keyword>
+<identifier> getRight, defined, kind = subroutine, type = int </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+<keyword> return </keyword>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> setWidth, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int </keyword>
+<identifier> Awidth, defined, kind = ARG, type = int, idx = 0 </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+<keyword> do </keyword>
+<identifier> hide, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<letStatement>
+<keyword> let </keyword>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Awidth, used, kind = ARG, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> show, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void </keyword>
+<identifier> move, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<ifStatement>
+<keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> direction, used, kind = FIELD, type = int, idx = 4 </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<ifStatement>
+<keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+</statements>
+<symbol> } </symbol>
+</ifStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> drawRectangle, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> drawRectangle, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 3 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+</statements>
+<symbol> } </symbol>
+<keyword> else </keyword>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<ifStatement>
+<keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+</term>
+<symbol> &gt; </symbol>
+<term>
+<integerConstant> 511 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 511 </integerConstant>
+</term>
+<symbol> - </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+</statements>
+<symbol> } </symbol>
+</ifStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> drawRectangle, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> setColor, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> Screen, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> drawRectangle, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 3 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> x, used, kind = FIELD, type = int, idx = 0 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> width, used, kind = FIELD, type = int, idx = 2 </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> y, used, kind = FIELD, type = int, idx = 1 </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> height, used, kind = FIELD, type = int, idx = 3 </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+</statements>
+<symbol> } </symbol>
+</ifStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol> } </symbol>
+</class>

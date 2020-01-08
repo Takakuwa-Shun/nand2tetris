@@ -1,0 +1,204 @@
+function SquareGame.new 0
+  push constant 2
+  call Memory.alloc 1
+  pop pointer 0
+  push constant 0
+  push constant 0
+  push constant 30
+  call Square.new 3
+  pop this 0
+  push constant 0
+  pop this 1
+  push pointer 0
+  return
+function SquareGame.dispose 0
+  push argument 0
+  pop pointer 0
+  push this 0
+  call Square.dispose 1
+  pop temp 0
+  push pointer 0
+  call Memory.deAlloc 1
+  pop temp 0
+  push constant 0
+  return
+function SquareGame.moveSquare 0
+  push argument 0
+  pop pointer 0
+  push this 1
+  push constant 1
+  eq
+  if-goto SquareGame.if0
+  goto SquareGame.else1
+label SquareGame.if0
+  push this 0
+  call Square.moveUp 1
+  pop temp 0
+  goto SquareGame.if_end2
+label SquareGame.else1
+label SquareGame.if_end2
+  push this 1
+  push constant 2
+  eq
+  if-goto SquareGame.if3
+  goto SquareGame.else4
+label SquareGame.if3
+  push this 0
+  call Square.moveDown 1
+  pop temp 0
+  goto SquareGame.if_end5
+label SquareGame.else4
+label SquareGame.if_end5
+  push this 1
+  push constant 3
+  eq
+  if-goto SquareGame.if6
+  goto SquareGame.else7
+label SquareGame.if6
+  push this 0
+  call Square.moveLeft 1
+  pop temp 0
+  goto SquareGame.if_end8
+label SquareGame.else7
+label SquareGame.if_end8
+  push this 1
+  push constant 4
+  eq
+  if-goto SquareGame.if9
+  goto SquareGame.else10
+label SquareGame.if9
+  push this 0
+  call Square.moveRight 1
+  pop temp 0
+  goto SquareGame.if_end11
+label SquareGame.else10
+label SquareGame.if_end11
+  push constant 5
+  call Sys.wait 1
+  pop temp 0
+  push constant 0
+  return
+function SquareGame.run 2
+  push argument 0
+  pop pointer 0
+  push constant 0
+  pop local 1
+label SquareGame.loop_start0
+  push local 1
+  not
+  if-goto SquareGame.loop_body1
+  goto SquareGame.loop_end2
+label SquareGame.loop_body1
+label SquareGame.loop_start3
+  push local 0
+  push constant 0
+  eq
+  if-goto SquareGame.loop_body4
+  goto SquareGame.loop_end5
+label SquareGame.loop_body4
+  call Keyboard.keyPressed 0
+  pop local 0
+  push pointer 0
+  call SquareGame.moveSquare 1
+  pop temp 0
+  goto SquareGame.loop_start3
+label SquareGame.loop_end5
+  push local 0
+  push constant 81
+  eq
+  if-goto SquareGame.if12
+  goto SquareGame.else13
+label SquareGame.if12
+  push constant 1
+  neg
+  pop local 1
+  goto SquareGame.if_end14
+label SquareGame.else13
+label SquareGame.if_end14
+  push local 0
+  push constant 90
+  eq
+  if-goto SquareGame.if15
+  goto SquareGame.else16
+label SquareGame.if15
+  push this 0
+  call Square.decSize 1
+  pop temp 0
+  goto SquareGame.if_end17
+label SquareGame.else16
+label SquareGame.if_end17
+  push local 0
+  push constant 88
+  eq
+  if-goto SquareGame.if18
+  goto SquareGame.else19
+label SquareGame.if18
+  push this 0
+  call Square.incSize 1
+  pop temp 0
+  goto SquareGame.if_end20
+label SquareGame.else19
+label SquareGame.if_end20
+  push local 0
+  push constant 131
+  eq
+  if-goto SquareGame.if21
+  goto SquareGame.else22
+label SquareGame.if21
+  push constant 1
+  pop this 1
+  goto SquareGame.if_end23
+label SquareGame.else22
+label SquareGame.if_end23
+  push local 0
+  push constant 133
+  eq
+  if-goto SquareGame.if24
+  goto SquareGame.else25
+label SquareGame.if24
+  push constant 2
+  pop this 1
+  goto SquareGame.if_end26
+label SquareGame.else25
+label SquareGame.if_end26
+  push local 0
+  push constant 130
+  eq
+  if-goto SquareGame.if27
+  goto SquareGame.else28
+label SquareGame.if27
+  push constant 3
+  pop this 1
+  goto SquareGame.if_end29
+label SquareGame.else28
+label SquareGame.if_end29
+  push local 0
+  push constant 132
+  eq
+  if-goto SquareGame.if30
+  goto SquareGame.else31
+label SquareGame.if30
+  push constant 4
+  pop this 1
+  goto SquareGame.if_end32
+label SquareGame.else31
+label SquareGame.if_end32
+label SquareGame.loop_start6
+  push local 0
+  push constant 0
+  eq
+  not
+  if-goto SquareGame.loop_body7
+  goto SquareGame.loop_end8
+label SquareGame.loop_body7
+  call Keyboard.keyPressed 0
+  pop local 0
+  push pointer 0
+  call SquareGame.moveSquare 1
+  pop temp 0
+  goto SquareGame.loop_start6
+label SquareGame.loop_end8
+  goto SquareGame.loop_start0
+label SquareGame.loop_end2
+  push constant 0
+  return

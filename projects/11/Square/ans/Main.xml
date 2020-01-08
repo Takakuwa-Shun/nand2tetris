@@ -1,0 +1,70 @@
+<class>
+<keyword> class </keyword>
+<identifier> Main, defined, kind = class </identifier>
+<symbol> { </symbol>
+<subroutineDec>
+<keyword> function </keyword>
+<keyword> void </keyword>
+<identifier> main, defined, kind = subroutine, type = void </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+<keyword> var </keyword>
+<identifier> SquareGame, used, kind = class </identifier>
+<identifier> game, defined, kind = VAR, type = SquareGame, idx = 0 </identifier>
+<symbol> ; </symbol>
+</varDec>
+<statements>
+<letStatement>
+<keyword> let </keyword>
+<identifier> game, used, kind = VAR, type = SquareGame, idx = 0 </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SquareGame, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> new, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+</letStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> game, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> run, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<doStatement>
+<keyword> do </keyword>
+<identifier> game, used, kind = class </identifier>
+<symbol> . </symbol>
+<identifier> dispose, used, kind = subroutine, type =  </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+</doStatement>
+<returnStatement>
+<keyword> return </keyword>
+<symbol> ; </symbol>
+</returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol> } </symbol>
+</class>
